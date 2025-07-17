@@ -1,22 +1,19 @@
 1.Write a query to fetch the EmpFname from the EmployeeInfo table in the upper case and use the ALIAS name as EmpName.
 
 2.Write a query to fetch the number of employees working in the department ‘HR’.
+
 3.Write a query to get the current date.
+
 4.Write a query to retrieve the first four characters of EmpLname from the EmployeeInfo table.
+
 5.Write a query to fetch only the place name (string before brackets) from the Address column of EmployeeInfo table.
 
-
-
-
 6.Write a query to create a new table that consists of data and structure copied from the other table.
+
 7.Write q query to find all the employees whose salary is between 50000 to 100000.
 select * from employeeposition where salary between 50000 and 100000;
 
 8.Write a query to find the names of employees that begin with ‘S’
-
-
-
-
 
 
 9.Write a query to fetch top N records.
