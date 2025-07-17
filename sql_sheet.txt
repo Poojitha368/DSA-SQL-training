@@ -10,6 +10,8 @@
 
 6.Write a query to create a new table that consists of data and structure copied from the other table.
 7.Write q query to find all the employees whose salary is between 50000 to 100000.
+select * from employeeposition where salary between 50000 and 100000;
+
 8.Write a query to find the names of employees that begin with ‘S’
 
 
