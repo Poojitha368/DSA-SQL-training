@@ -54,11 +54,16 @@ WHERE   pos.POSITION IN ("CEO","Manager");
 
 10. Find the employees who are working on a project in the 'Development' department AND have a 'Developer' position.
 select p.EMP_ID,p.PROJECT_NO,pos.POSITION ,pos.DEPARTMENT from PROJECT p
-RIGHT JOIN  employee_position pos
+INNER JOIN  employee_position pos
 ON p.EMP_ID=pos.EMP_ID
 WHERE pos.POSITION = "Developer" and pos.DEPARTMENT="Development";
 
 11. Identify employees who have the same position but are in different departments in the EMPLOYEE_POSITION table. (This might require more data to show meaningful results with self-join, but you can still attempt it conceptually).
+select * from employee_position pos1
+INNER JOIN employee_position pos2
+ON pos1.POSITION = pos2.POSITION
+WHERE pos1.DEPARTMENT!=pos2.DEPARTMENT
+AND pos1.EMP_ID > pos2.EMP_ID;
 
 12. For each department in the PROJECT table, find the average salary of employees working in that department.
 select avg(e.SALARY),p.DEPARTMENT from EMPLOYEE e
