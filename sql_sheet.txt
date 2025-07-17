@@ -55,7 +55,9 @@ select * from employeeinfo where empid%2 != 0;
 select * from employeeinfo where empid%2 = 0;
 
 19. Write a SQL query to retrieve employee details from EmployeeInfo table who have a date of joining in the EmployeePosition table.
-
+Select empid from (select rownum, empid from employeeinfo)
+ where MOD(rownum, 2) = 0;
+ 
 20. Write a query to retrieve two minimum and maximum salaries from the EmployeePosition table.
 
 21. Write a query to find the Nth highest salary from the table without using TOP/limit keyword.
