@@ -57,6 +57,9 @@ where MOD(rownum, 2) = 0;
 19. Write a SQL query to retrieve employee details from EmployeeInfo table who have a date of joining in the EmployeePosition table.
 select * from employeeinfo 
 where empid in (select empid from employeeposition);
+or
+select * from employeeinfo e where 
+exists(select * from employeeposition p  where e.empid = p.empid);
 
 20. Write a query to retrieve two minimum and maximum salaries from the EmployeePosition table.
 select * from employeeposition order by salary desc limit 2;
