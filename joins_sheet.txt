@@ -1,0 +1,103 @@
+1. List all employees and their corresponding project details.
+select * from EMPLOYEE e
+LEFT JOIN PROJECT p
+ON e.EMP_ID = p.EMP_ID
+
+2. Retrieve the names of all employees who are involved in a project, along with their project numbers and departments.
+select e.EMP_NAME,p.PROJECT_NO,pos.DEPARTMENT from EMPLOYEE e
+INNER JOIN PROJECT p
+ON e.EMP_ID = p.EMP_ID 
+LEFT JOIN employee_position pos
+ON e.EMP_ID=pos.EMP_ID;
+
+3. Show all employees, and if they are assigned to a project, display their project details. If an employee is not assigned to a project, still list their name.
+select * from EMPLOYEE e
+LEFT JOIN PROJECT p
+ON e.EMP_ID = p.EMP_ID ;
+
+4. Find the position and department for each employee. Include employees who might not have a defined position.
+select * from EMPLOYEE e
+LEFT JOIN employee_position pos
+ON e.EMP_ID = pos.EMP_ID ;
+
+5. List the names of employees who are 'Developer' and their respective project departments.
+select * from EMPLOYEE e
+INNER JOIN employee_position pos
+ON e.EMP_ID = pos.EMP_ID 
+INNER JOIN PROJECT p
+ON e.EMP_ID=p.EMP_ID
+WHERE pos.POSITION='Developer';
+
+6. Display all project details, and if an employee is associated with that project, show their name. If a project has no associated employee in the PROJECT table, still list the project details.
+select e.EMP_NAME,p.PROJECT_NO,p.EMP_ID from EMPLOYEE e
+RIGHT JOIN PROJECT p
+ON e.EMP_ID=p.EMP_ID;
+
+7. Find the names and salaries of employees who are in the 'Designing' department for a project.
+select e.EMP_NAME,e.SALARY,pos.DEPARTMENT from EMPLOYEE e
+INNER JOIN  employee_position pos
+ON e.EMP_ID=pos.EMP_ID
+WHERE pos.DEPARTMENT="Designing";
+
+8. List all employee names, their city, their position, and the department they work in for a project. Include all employees, even if they don't have a position or are not on a project.
+select e.EMP_NAME,e.CITY,pos.POSITION,pos.DEPARTMENT,p.PROJECT_NO from EMPLOYEE e
+LEFT JOIN  employee_position pos
+ON e.EMP_ID=pos.EMP_ID
+LEFT JOIN PROJECT p
+ON e.EMP_ID = p.EMP_ID;
+
+9. Show the names of employees who are either 'CEO' or 'Manager', along with their respective cities.
+select e.EMP_NAME,e.CITY,pos.POSITION from EMPLOYEE e
+INNER JOIN  employee_position pos
+ON e.EMP_ID=pos.EMP_ID
+WHERE   pos.POSITION IN ("CEO","Manager");
+
+10. Find the employees who are working on a project in the 'Development' department AND have a 'Developer' position.
+select p.EMP_ID,p.PROJECT_NO,pos.POSITION ,pos.DEPARTMENT from PROJECT p
+RIGHT JOIN  employee_position pos
+ON p.EMP_ID=pos.EMP_ID
+WHERE pos.POSITION = "Developer" and pos.DEPARTMENT="Development";
+
+11. Identify employees who have the same position but are in different departments in the EMPLOYEE_POSITION table. (This might require more data to show meaningful results with self-join, but you can still attempt it conceptually).
+
+12. For each department in the PROJECT table, find the average salary of employees working in that department.
+select avg(e.SALARY),p.DEPARTMENT from EMPLOYEE e
+INNER JOIN  PROJECT p
+ON e.EMP_ID=p.EMP_ID
+GROUP BY p.DEPARTMENT;
+
+13. List the employees who earn more than the average salary of all employees working in the 'Development' department (across both PROJECT and EMPLOYEE_POSITION if applicable, or just PROJECT for simplicity).
+SELECT SALARY FROM EMPLOYEE WHERE SALARY> (select avg(e.SALARY) as avg_salary from EMPLOYEE e
+INNER JOIN  PROJECT p
+ON e.EMP_ID=p.EMP_ID
+GROUP BY p.DEPARTMENT
+HAVING p.DEPARTMENT="Development");
+
+or
+
+SELECT SALARY FROM EMPLOYEE WHERE SALARY> (select avg(e.SALARY) as avg_salary from EMPLOYEE e
+INNER JOIN  PROJECT p
+ON e.EMP_ID=p.EMP_ID
+INNER JOIN employee_position pos
+ON e.EMP_ID = pos.EMP_ID
+GROUP BY p.DEPARTMENT
+HAVING p.DEPARTMENT="Development");
+
+14. Find the name of the employee who is the 'CEO' and their corresponding project department (if any).
+select e.EMP_ID,e.EMP_NAME,pos.POSITION,p.DEPARTMENT from EMPLOYEE e
+INNER JOIN  employee_position pos
+ON e.EMP_ID=pos.EMP_ID
+INNER JOIN PROJECT p
+ON e.EMP_ID=p.EMP_ID
+WHERE pos.POSITION = 'CEO';
+
+15. Retrieve the names of employees who are assigned to a project and also have a defined position, and ensure that their department in the PROJECT table matches their department in the EMPLOYEE_POSITION table (if both exist for the same employee).
+kets from the 
+select e.EMP_ID,e.EMP_NAME,p.DEPARTMENT,pos.DEPARTMENT from EMPLOYEE e
+INNER JOIN PROJECT p
+ON e.EMP_ID=p.EMP_ID
+INNER JOIN employee_position pos
+ON e.EMP_ID = pos.EMP_ID
+WHERE p.DEPARTMENT = pos.DEPARTMENT;
+
+
