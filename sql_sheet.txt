@@ -65,8 +65,16 @@ select * from employeeinfo e where
 exists(select * from employeeposition p  where e.empid = p.empid);
 
 20. Write a query to retrieve two minimum and maximum salaries from the EmployeePosition table.
-select * from employeeposition order by salary desc limit 2;
-select * from employeeposition order by salary asc limit 2;
+select distinct * from employeeposition order by salary desc limit 2;
+select distinct * from employeeposition order by salary asc limit 2;
+or 
+select distinct salary from employeeposition e1 
+where 2>=(select count(distinct salary) from employeeposition e2 where e1.salary <=e2.salary) order by e1.salary desc;
+
+select distinct salary from employeeposition e1 
+where 2>=(select count(distinct salary) from employeeposition e2 where e1.salary >=e2.salary) order by e1.salary desc;
+
+
 
 21. Write a query to find the Nth highest salary from the table without using TOP/limit keyword.
 
