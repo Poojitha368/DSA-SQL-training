@@ -1,0 +1,32 @@
+-- create employee table info
+create table employeeinfo (
+  empid integer primary key,
+  empfname varchar(10) ,
+  emplname varchar(10),
+  department varchar(10),
+  project char(5),
+  address varchar(20),
+  dob date ,
+  gender char(2));
+insert into employeeinfo(empid,empfname,emplname,department,project,address,dob,gender) 
+values(1,'Sanjay','Mehra','HR','P1','Hyderabad(HYD)','1976-12-01','M'),
+(2,'Ananya','Mishra','Admin','P2','Delhi(DEL)','1968-05-02','F'),
+(3,'Rohan','Diwan','Account','P3','Mumbai(BOM)','1980-01-01','M'),
+(4,'Sonia','Kulkarni','HR','P1','Hyderabad(HYD)','1992-05-02','F'),
+(5,'Ankit','Kapoor','Admin','P2','Delhi(DEL)','1994-07-03','M');
+select * from employeeinfo;
+
+
+-- create employee position table
+create table employeeposition(
+  empid integer ,
+  empposition varchar(10),
+  dateofjoining date,
+  salary integer);
+insert into employeeposition(empid,empposition,dateofjoining,salary)
+values (1,'Manager','2022-05-01',500000),
+(2,'Executive','2022-05-02',75000),
+(3,'Manager','2022-05-01',90000),
+(2,'Lead','2022-02-05',85000),
+(1,'Execute','2022-05-01',300000);
+select * from employeeposition;
