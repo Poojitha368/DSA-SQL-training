@@ -8,6 +8,7 @@ create table employeeinfo (
   address varchar(20),
   dob date ,
   gender char(2));
+
 insert into employeeinfo(empid,empfname,emplname,department,project,address,dob,gender) 
 values(1,'Sanjay','Mehra','HR','P1','Hyderabad(HYD)','1976-12-01','M'),
 (2,'Ananya','Mishra','Admin','P2','Delhi(DEL)','1968-05-02','F'),
@@ -23,6 +24,7 @@ create table employeeposition(
   empposition varchar(10),
   dateofjoining date,
   salary integer);
+  
 insert into employeeposition(empid,empposition,dateofjoining,salary)
 values (1,'Manager','2022-05-01',500000),
 (2,'Executive','2022-05-02',75000),
