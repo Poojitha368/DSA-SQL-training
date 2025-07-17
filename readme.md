@@ -1,0 +1,1 @@
+sql sheet link : https://docs.google.com/document/d/1Ko4oEJuMg-mBabdR3m7MMMKBQ78NEebQ5w0dD668MHQ/edit?tab=t.0
