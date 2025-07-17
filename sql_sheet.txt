@@ -37,9 +37,12 @@ select * from employeeinfo where emplname like '____a';
 select * from employeeinfo where empfname not in ('Sanjay','Sonia');
 
 15. Write a query to fetch details of employees with the address as “DELHI(DEL)”.
-
+select * from employeeinfo where address = "DELHI(DEL)"
+select * from employeeinfo where like "DELHI(DEL)" --(more prefered)--
 
 16. Write a query to fetch all employees who also hold the managerial position.
+select * from employeeinfo where empid IN (Select empid 
+from employeeposition where empposition = 'Manager');
 
 
 17. Write a query to fetch the department-wise count of employees sorted by department’s count in ascending order.
