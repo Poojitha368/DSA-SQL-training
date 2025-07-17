@@ -1,4 +1,5 @@
 1.Write a query to fetch the EmpFname from the EmployeeInfo table in the upper case and use the ALIAS name as EmpName.
+select upper(empfname) as upper_name  from employeeinfo;
 
 2.Write a query to fetch the number of employees working in the department ‘HR’.
 select department,count(*) from employeeinfo group by department having department='HR';
