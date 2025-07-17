@@ -34,7 +34,7 @@ Select * from employeeinfo order by empLname desc,
 select * from employeeinfo where emplname like '____a'; 
 
 14. Write a query to fetch details of all employees excluding the employees with first names, “Sanjay” and “Sonia” from the EmployeeInfo table.
-
+select * from employeeinfo where empfname not in ('Sanjay','Sonia');
 
 15. Write a query to fetch details of employees with the address as “DELHI(DEL)”.
 
