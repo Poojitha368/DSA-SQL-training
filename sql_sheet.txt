@@ -1,4 +1,5 @@
 1.Write a query to fetch the EmpFname from the EmployeeInfo table in the upper case and use the ALIAS name as EmpName.
+
 2.Write a query to fetch the number of employees working in the department ‘HR’.
 3.Write a query to get the current date.
 4.Write a query to retrieve the first four characters of EmpLname from the EmployeeInfo table.
@@ -48,5 +49,19 @@ from employeeposition where empposition = 'Manager');
 17. Write a query to fetch the department-wise count of employees sorted by department’s count in ascending order.
 select department,count(*) from employeeinfo group by department
 order by department ;
+
+18. Write a query to calculate the even and odd records from a table.
+select * from employeeinfo where empid%2 != 0;
+select * from employeeinfo where empid%2 = 0;
+
+19. Write a SQL query to retrieve employee details from EmployeeInfo table who have a date of joining in the EmployeePosition table.
+
+20. Write a query to retrieve two minimum and maximum salaries from the EmployeePosition table.
+
+21. Write a query to find the Nth highest salary from the table without using TOP/limit keyword.
+
+22. Write a query to retrieve duplicate records from a table.
+
+23. Write a query to retrieve the list of employees working in the same department.
 
 
