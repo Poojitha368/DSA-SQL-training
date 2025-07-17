@@ -33,3 +33,10 @@ self join - It is joined when a table needs to be joined with the itself.
 Ex: SELECT column_name(s)
     from table1 JOIN table2
     ON table1.column_name = table2.column_name
+
+
+NOTE: Where can also be written for joins, so after performing join we can write where , it will be applicable to select.
+Ex: SELECT column_name(s)
+    from table1  JOIN table2
+    ON table1.column_name = table2.column_name
+    WHERE condition;
