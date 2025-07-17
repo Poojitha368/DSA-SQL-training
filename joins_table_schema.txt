@@ -1,0 +1,42 @@
+CREATE TABLE EMPLOYEE (
+    EMP_ID INT PRIMARY KEY,
+    EMP_NAME VARCHAR(50),
+    CITY VARCHAR(50),
+    SALARY INT,
+    AGE INT
+);
+
+INSERT INTO EMPLOYEE (EMP_ID, EMP_NAME, CITY, SALARY, AGE) VALUES
+(1, 'Angelina', 'Chicago', 200000, 30),
+(2, 'Robert', 'Austin', 300000, 26),
+(3, 'Christian', 'Denver', 100000, 42),
+(4, 'Kristen', 'Washington', 500000, 29),
+(5, 'Russell', 'Los angels', 200000, 36),
+(6, 'Marry', 'Canada', 600000, 48);
+
+
+CREATE TABLE PROJECT (
+    PROJECT_NO INT PRIMARY KEY,
+    EMP_ID INT,
+    DEPARTMENT VARCHAR(50),
+    FOREIGN KEY (EMP_ID) REFERENCES EMPLOYEE(EMP_ID)
+);
+
+INSERT INTO PROJECT (PROJECT_NO, EMP_ID, DEPARTMENT) VALUES
+(101, 1, 'Testing'),
+(102, 2, 'Development'),
+(103, 3, 'Designing'),
+(104, 4, 'Development');
+
+CREATE TABLE EMPLOYEE_POSITION (
+    EMP_ID INT,
+    POSITION VARCHAR(50),
+    DEPARTMENT VARCHAR(50),
+    FOREIGN KEY (EMP_ID) REFERENCES EMPLOYEE(EMP_ID)
+);
+
+INSERT INTO EMPLOYEE_POSITION (EMP_ID, POSITION, DEPARTMENT) VALUES
+(1, 'CEO', 'BDA'),
+(3, 'Manager', 'Designing'),
+(4, 'Executive', 'Testing'),
+(6, 'Developer', 'Development');
