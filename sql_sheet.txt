@@ -55,6 +55,8 @@ select empid from (select rownum, empid from employeeinfo)
 where MOD(rownum, 2) = 0;
 
 19. Write a SQL query to retrieve employee details from EmployeeInfo table who have a date of joining in the EmployeePosition table.
+select * from employeeinfo 
+where empid in (select empid from employeeposition);
 
 20. Write a query to retrieve two minimum and maximum salaries from the EmployeePosition table.
 
