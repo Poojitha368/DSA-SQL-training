@@ -24,16 +24,14 @@ Select empid from emp_position order by salary desc limit 2
 Select concat(empfname, ‘ ‘, emplname) as FullName from employeeinfo
 
 11. Write a query find number of employees whose DOB is between 02/05/1975 to 31/12/1985 and are grouped according to gender
-Select count(*) from employeeinfo where dob between ‘1975/05/02’ and ‘1985/12/31’ group by gender
-
-
+Select count(*) from employeeinfo where dob between ‘1975-05-02’ and ‘1985-12-31’ group by gender
 
 
 12. Write a query to fetch all the records from the EmployeeInfo table ordered by EmpLname in descending order and Department in the ascending order.
 Select * from employeeinfo order by empLname desc, 
 
 13. Write a query to fetch details of employees whose EmpLname ends with an alphabet ‘A’ and contains five alphabets.
-
+select * from employeeinfo where emplname like '____a'; 
 
 14. Write a query to fetch details of all employees excluding the employees with first names, “Sanjay” and “Sonia” from the EmployeeInfo table.
 
