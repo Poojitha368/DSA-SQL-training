@@ -1,0 +1,35 @@
+joins
+
+inner join - returns only records  matching values in both tables.(intersection)
+Ex: SELECT column_name(s)
+    from table1 INNER JOIN table2
+    ON table1.column_name = table2.column_name
+
+left join - returns all records from left table and matching records from right table.
+If value not in right table it returns null  ()
+Ex: SELECT column_name(s)
+    from table1 LEFT JOIN table2
+    ON table1.column_name = table2.column_name
+
+right join - returns all records from right table and matching records from left table.
+If value not in left table it returns null  ()
+Ex: SELECT column_name(s)
+    from table1 RIGHT JOIN table2
+    ON table1.column_name = table2.column_name
+
+full outer join - returns all records whe  there is match in either left or right,first 
+it applies inner join,then left and right join.(union)
+Ex: SELECT column_name(s)
+    from table1 FULL OUTER JOIN table2
+    ON table1.column_name = table2.column_name
+
+cross join - return cartesain product of two tables, records of first table matches to 
+all rows in second table.No condition in cross join.
+Ex: SELECT column_name(s)
+    from table1 CROSS JOIN table2
+
+
+self join - It is joined when a table needs to be joined with the itself.
+Ex: SELECT column_name(s)
+    from table1 JOIN table2
+    ON table1.column_name = table2.column_name
