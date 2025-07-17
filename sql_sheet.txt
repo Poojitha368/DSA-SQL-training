@@ -1,0 +1,50 @@
+1.Write a query to fetch the EmpFname from the EmployeeInfo table in the upper case and use the ALIAS name as EmpName.
+2.Write a query to fetch the number of employees working in the department ‘HR’.
+3.Write a query to get the current date.
+4.Write a query to retrieve the first four characters of EmpLname from the EmployeeInfo table.
+5.Write a query to fetch only the place name (string before brackets) from the Address column of EmployeeInfo table.
+
+
+
+
+6.Write a query to create a new table that consists of data and structure copied from the other table.
+7.Write q query to find all the employees whose salary is between 50000 to 100000.
+8.Write a query to find the names of employees that begin with ‘S’
+
+
+
+
+
+
+9.Write a query to fetch top N records.
+Select * from employeeinfo limit 5;
+Select empid from emp_position order by salary desc limit 2
+
+10.Write a query to retrieve the EmpFname and EmpLname in a single column as “FullName”. The first name and the last name must be separated with space.
+Select concat(empfname, ‘ ‘, emplname) as FullName from employeeinfo
+
+11. Write a query find number of employees whose DOB is between 02/05/1975 to 31/12/1985 and are grouped according to gender
+Select count(*) from employeeinfo where dob between ‘1975/05/02’ and ‘1985/12/31’ group by gender
+
+
+
+
+12. Write a query to fetch all the records from the EmployeeInfo table ordered by EmpLname in descending order and Department in the ascending order.
+Select * from employeeinfo order by empLname desc, 
+
+13. Write a query to fetch details of employees whose EmpLname ends with an alphabet ‘A’ and contains five alphabets.
+
+
+14. Write a query to fetch details of all employees excluding the employees with first names, “Sanjay” and “Sonia” from the EmployeeInfo table.
+
+
+15. Write a query to fetch details of employees with the address as “DELHI(DEL)”.
+
+
+16. Write a query to fetch all employees who also hold the managerial position.
+
+
+17. Write a query to fetch the department-wise count of employees sorted by department’s count in ascending order.
+
+
+
