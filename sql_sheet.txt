@@ -48,7 +48,7 @@ from employeeposition where empposition = 'Manager');
 
 17. Write a query to fetch the department-wise count of employees sorted by department’s count in ascending order.
 select department,count(*) from employeeinfo group by department
-order by department ;
+order by department ASC ;
 
 18. Write a query to calculate the even and odd records from a table.
 select * from employeeinfo where empid%2 != 0;
