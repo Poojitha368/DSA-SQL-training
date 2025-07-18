@@ -36,3 +36,18 @@ if x->yz then x->y and x->z
 6.Pseduo transitive rule.
 If x can determine y and yz determines w then xz determines W.
 if x->y and yz->W then xz->W
+
+
+Need for normalization:
+    To maintain reduncdancy
+    maintain anaomaly
+
+Normalization forms
+1NF - A table in 1NF if it contains atomic value(each cell only one value).
+2NF - A table in 2NF form, first it should be in 1NF form and all non-primary key 
+      attributes are fully dependent on primary key.
+3NF - A table should be in 3NF and no tansition dependency should exists between them.
+4NF or BCNF - In table, no multi value should be there.
+5NF  - Table should be in 4NF, and not contains any joint dependency.
+
+
