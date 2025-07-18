@@ -1,0 +1,38 @@
+Functional depencency
+X -> Y
+
+Types:
+Trivial functional dependency 
+A->B has trivial functional depency if b is subset of A
+Ex: {employee_id,employee_name} and employee_id is subset of {employee_id,employee_name}
+
+Non-Trivial functional depencency
+
+
+
+Inference rules:(IR)
+6 types of inference rules
+1.Reflexive rules
+if Y is subset of X, then X determines Y, X->Y.
+Ex: X={a,b,c,d,e}
+    Y={a,b,c}
+
+2.Augmentation rule
+It is called as partial dependency, if X->Y then XZ->YZ
+
+3.Transitive rule
+if x determines y and y determine z then x can determine z.
+X->Y and Y->Z then X->z
+
+4.Union rule
+If x determines y and x determines z then it can determine both y and z.
+x->y and x->z then x->yz
+
+5.Decomposition rule
+It is reversal of union rule.
+If x determine y and z then x can determine for y and x can determine z.
+if x->yz then x->y and x->z
+
+6.Pseduo transitive rule.
+If x can determine y and yz determines w then xz determines W.
+if x->y and yz->W then xz->W
