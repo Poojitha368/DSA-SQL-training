@@ -17,6 +17,7 @@ if Y is subset of X, then X determines Y, X->Y.
 Ex: X={a,b,c,d,e}
     Y={a,b,c}
 
+
 2.Augmentation rule
 It is called as partial dependency, if X->Y then XZ->YZ
 
