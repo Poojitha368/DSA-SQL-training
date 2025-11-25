@@ -3,6 +3,7 @@ select * from EMPLOYEE e
 LEFT JOIN PROJECT p
 ON e.EMP_ID = p.EMP_ID
 
+
 2. Retrieve the names of all employees who are involved in a project, along with their project numbers and departments.
 select e.EMP_NAME,p.PROJECT_NO,pos.DEPARTMENT from EMPLOYEE e
 INNER JOIN PROJECT p
