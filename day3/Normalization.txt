@@ -10,7 +10,6 @@ Non-Trivial functional depencency
 
 
 
-
 Inference rules:(IR)
 6 types of inference rules
 1.Reflexive rules
