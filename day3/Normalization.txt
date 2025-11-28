@@ -9,7 +9,6 @@ Ex: {employee_id,employee_name} and employee_id is subset of {employee_id,employ
 Non-Trivial functional depencency
 
 
-
 Inference rules:(IR)
 6 types of inference rules
 1.Reflexive rules
