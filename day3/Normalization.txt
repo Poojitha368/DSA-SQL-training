@@ -48,6 +48,7 @@ Normalization forms
 4NF or BCNF - In table, no multi value should be there.
 5NF  - Table should be in 4NF, and not contains any joint dependency.
 
+
 QUICK NOTES:
 2nf - all columns needs to depend on primary key
 3nf - all columns needs to only depend on primary key (other columns should not depending on other columns)
