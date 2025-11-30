@@ -7,7 +7,6 @@ A->B has trivial functional depency if b is subset of A
 Ex: {employee_id,employee_name} and employee_id is subset of {employee_id,employee_name}
 
 Non-Trivial functional depencency
-
 Inference rules:(IR)
 6 types of inference rules
 1.Reflexive rules
