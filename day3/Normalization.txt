@@ -51,3 +51,4 @@ Normalization forms
 QUICK NOTES:
 2nf - all columns needs to depend on primary key
 3nf - all columns needs to only depend on primary key (other columns should not depending on other columns)
+
