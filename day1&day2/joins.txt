@@ -1,4 +1,5 @@
 joins
+
 inner join - returns only records  matching values in both tables.(intersection)
 Ex: SELECT column_name(s)
     from table1 INNER JOIN table2
