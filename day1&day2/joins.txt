@@ -5,6 +5,7 @@ Ex: SELECT column_name(s)
     from table1 INNER JOIN table2
     ON table1.column_name = table2.column_name
 
+
 left join - returns all records from left table and matching records from right table.
 If value not in right table it returns null  ()
 Ex: SELECT column_name(s)
