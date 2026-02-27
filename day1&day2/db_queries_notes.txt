@@ -5,6 +5,7 @@ FROM EmployeeDetails
 WHERE ManagerId = 986;
 
 
+
  2. Write an SQL query to fetch the different projects available from the EmployeeSalary table.
  While referring to the EmployeeSalary table, we can see that this table contains project values corresponding to each employee, or we can say that we will have duplicate project values while selecting Project values from this table.
 
