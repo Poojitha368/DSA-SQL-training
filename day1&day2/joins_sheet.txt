@@ -106,4 +106,3 @@ INNER JOIN employee_position pos
 ON e.EMP_ID = pos.EMP_ID
 WHERE p.DEPARTMENT = pos.DEPARTMENT;
 
-
