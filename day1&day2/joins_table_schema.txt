@@ -40,3 +40,4 @@ INSERT INTO EMPLOYEE_POSITION (EMP_ID, POSITION, DEPARTMENT) VALUES
 (3, 'Manager', 'Designing'),
 (4, 'Executive', 'Testing'),
 (6, 'Developer', 'Development');
+
