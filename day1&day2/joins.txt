@@ -39,4 +39,4 @@ NOTE: Where can also be written for joins, so after performing join we can write
 Ex: SELECT column_name(s)
     from table1  JOIN table2
     ON table1.column_name = table2.column_name
-    WHERE condition;
+    WHERE condition; 
