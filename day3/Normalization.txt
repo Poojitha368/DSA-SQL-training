@@ -1,5 +1,5 @@
 Functional depencency 
-X -> Y
+X -> Y 
 
 Types:
 Trivial functional dependency 
