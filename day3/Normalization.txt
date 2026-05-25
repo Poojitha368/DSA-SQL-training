@@ -1,4 +1,4 @@
-Functional depencency 
+Functional depencency
 X -> Y 
  
 Types:
