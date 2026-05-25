@@ -1,6 +1,7 @@
 Functional depencency
 X -> Y
 
+
 Types:
 Trivial functional dependency 
 A->B has trivial functional depency if b is subset of A
