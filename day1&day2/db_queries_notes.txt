@@ -371,5 +371,5 @@ WHERE N-1 = (
             	FROM EmployeeSalary Emp2
             	WHERE Emp2.Salary > Emp1.Salary
         	)
- 
+
  
