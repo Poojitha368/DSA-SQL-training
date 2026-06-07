@@ -96,4 +96,3 @@ for elem in elements:
    
 print(tree.level_order_traversal())
 print(tree.level_order_traversal_snake())
-
