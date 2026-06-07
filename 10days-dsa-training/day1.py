@@ -12,7 +12,7 @@ class Tree:
         if self.root is None:
             self.root = Node(data)
         else:
-            self._insert_rec(self.root, data)
+            self._insert_rec(self.root, data) 
 
     def _insert_rec(self, node, data):
         if data < node.data:
